@@ -37,5 +37,8 @@ public class DataTypes {
         // Suitable for representing statistical, astronimcal measurements
         double pi = 3.14159265359;
         System.out.println("The value of pi is "+pi);
+
+
+
     }
 }
