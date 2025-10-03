@@ -1,0 +1,60 @@
+import React from 'react';  
+import { motion } from 'framer-motion';  
+import { Smartphone, Zap, Users } from 'lucide-react';  
+
+const Hero = () => {  
+  return (  
+    <section className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 flex items-center justify-center relative overflow-hidden">  
+      <div className="container mx-auto px-4 text-center relative z-10">  
+        <motion.div  
+          initial={{ opacity: 0, y: 30 }}  
+          animate={{ opacity: 1, y: 0 }}  
+          transition={{ duration: 0.8 }}  
+          className="max-w-4xl mx-auto"  
+        >  
+          <motion.div  
+            initial={{ scale: 0.8, rotate: -5 }}  
+            animate={{ scale: 1, rotate: 0 }}  
+            transition={{ duration: 0.6, delay: 0.2 }}  
+            className="inline-flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full mb-6"  
+          >  
+            <Zap className="w-4 h-4 text-green-600" />  
+            <span className="text-sm font-medium text-green-800">Sistema inteligente para restaurantes</span>  
+          </motion.div>  
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">  
+            EatQuick  
+          </h1>  
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">  
+            El sistema de pedidos más rápido para restaurantes pequeños y medianos. Olvídate de las esperas eternas: los clientes piden desde su mesa y todo llega volando a la cocina.  
+          </p>  
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">  
+            <motion.button  
+              whileHover={{ scale: 1.05 }}  
+              whileTap={{ scale: 0.95 }}  
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"  
+            >  
+              Solicita una Demo Gratis  
+            </motion.button>  
+            <motion.div  
+              initial={{ opacity: 0 }}  
+              animate={{ opacity: 1 }}  
+              transition={{ delay: 0.4 }}  
+              className="flex items-center gap-6 text-gray-500"  
+            >  
+              <div className="flex items-center gap-2">  
+                <Smartphone className="w-5 h-5 text-green-500" />  
+                <span>Desde tu móvil</span>  
+              </div>  
+              <div className="hidden sm:flex items-center gap-2">  
+                <Users className="w-5 h-5 text-green-500" />  
+                <span>+1,000 restaurantes</span>  
+              </div>  
+            </motion.div>  
+          </div>  
+        </motion.div>  
+      </div>  
+    </section>  
+  );  
+};  
+
+export default Hero;
